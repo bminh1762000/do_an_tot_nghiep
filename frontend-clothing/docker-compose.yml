@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  shop-app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: shop-app
+    restart: always
+    networks:
+      - frontend-beta
+    environment:
+      ENVIRONMENT: "prod"
+    ports:
+      - "8099:80"
+networks:
+  frontend-beta:
+    external: true

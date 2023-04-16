@@ -1,0 +1,4 @@
+apps/commons/languages/Msg_*.ts
+!.storybook
+testcafe
+node_modules
